@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* Vibrant Gradient Background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Center content vertically */
+}
+
+/* Heading Style */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out; /* Fade-in Animation */
+}
+
+/* Input Container */
+.input-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover Effect */
+}
+
+.input-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Textarea Style */
+textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition Effects */
+}
+
+textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow on focus */
+}
+
+/* Button Style */
+button {
+    background-color: #ff4757; /* Vibrant Red Button */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Button Animation */
+    animation: pulse 1.5s infinite; /* Pulsing Animation */
+}
+
+button:hover {
+    background-color: #ff6b81; /* Lighter Red on Hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Result Style */
+#result {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(233, 236, 239, 0.9); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    animation: slideIn 0.5s ease-in-out; /* Slide-in Animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
